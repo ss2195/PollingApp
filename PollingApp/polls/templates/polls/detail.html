@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
 <h1>{{ question.question_text }}</h1>
 {% if error_message %}
     <p><strong>
@@ -12,6 +16,6 @@
         <label for = "choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
         <br>
     {% endfor %}
-    <input type="submit" value="vote">
+    <input type="submit" value="Press to Vote" id="vote">
 </form>
     
